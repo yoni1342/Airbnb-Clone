@@ -39,9 +39,6 @@ function Footer() {
         <hr />
         <div>
             <p>&copy; 2022 Yonatan Tesfaye</p>
-            <GlobeAltIcon
-            className = 'h-6'
-            />
 
         </div>
     </footer>
