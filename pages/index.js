@@ -44,6 +44,7 @@ export default function Home({ exporeData, cardsData }) {
         </section>
 
         <LargeCard 
+          key = 'id'
           img = 'https://links.papareact.com/4cj'
           title = 'The Greatest Outdoors'
           description = 'wishlists curated by Airbnb.'
