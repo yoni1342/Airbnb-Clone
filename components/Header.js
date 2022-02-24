@@ -34,12 +34,12 @@ function Header() {
 
         </div>
         {/* Middle */}
-        <div className = 'py-2 md:shadow-sm md:border-2 flex items-center rounded-full px-3'>
+        <div className = 'py-2 md:shadow-sm md:border-2 sm:border-2 flex items-center rounded-full px-3'>
             <input 
             value = {searchInput} 
             onChange = {(e)=>setSearchInput(e.target.value)}
             type="text" placeholder = 'Start yours Search' className ='pl-5 bg-transparent
-             outline-none flex-grow text-sm text-gray-600 placeholder-gray-400'  />
+             outline-none flex-grow text-sm text-gray-600 placeholder-gray-400 sm: w-12'  />
             <SearchIcon className ='w-8 bg-red-400 text-white rounded-full p-2 hidden md:inline-flex
             mx-2 cursor-pointer
             ' />
@@ -47,7 +47,7 @@ function Header() {
         {/* Right */}
         <div className ='flex text-gray-500 items-center space-x-4 justify-end'>
             <p className ='hidden md:inline-flex cursor-pointer'>Become a host</p>
-            <GlobeAltIcon className ='h-6 cursor-pointer'/>
+            <GlobeAltIcon className ='h-6 cursor-pointer hidden md:inline-block'/>
             <div className = 'flex items-center space-x-2 border-2 p-2 rounded-full'>
                 <MenuIcon className ='h-6 cursor-pointer'/>
                 <UserCircleIcon className = 'h-6 cursor-pointer'/>
