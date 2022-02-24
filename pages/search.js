@@ -3,13 +3,14 @@ import Header from '../components/Header'
 import { useRouter } from 'next/router'
 import { format } from 'date-fns';
 import InfoCard from '../components/InfoCard';
+import Footer from '../components/Footer';
 function Search({searchResults}) {
   const router = useRouter();
   const {location, startDate, endDate, numberGust} = router.query
   const formatStartDate = format(new Date(startDate), 'dd, MMMM, yy');
   const formatEndDate = format(new Date(endDate), 'dd, MMMM, yy');
   const range = `${formatStartDate} - ${formatEndDate}`;
-  console.log(searchResults)
+
   return (
     <div>
         <Header palce = {`${location} | ${range} | ${numberGust} guests`}/>
@@ -40,6 +41,7 @@ function Search({searchResults}) {
                 </div>
             </section>
         </main>
+        <Footer/>
     </div>
   )
 }
