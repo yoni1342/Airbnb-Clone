@@ -4,7 +4,7 @@ import { HeartIcon } from '@heroicons/react/outline'
 import { StarIcon } from '@heroicons/react/solid'
 function InfoCard({img, location, title, description, star, price, total}) {
   return (
-    <div className = 'flex'>
+    <div className = 'flex m-3 py-6 px-3 border-b hover:shadow-lg cursor-pointer hover:opacity-80 transition duration-200 ease-out first:border-t'>
         <div className ='relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0'>
             <Image 
                 src = {img}
@@ -28,8 +28,8 @@ function InfoCard({img, location, title, description, star, price, total}) {
                 <p className = 'text-sm text-gray-500'>{star}</p>
               </p>
               <p>
-                <p className = 'font-bold'>{price}</p>
-                <p className = 'text-xs text-gray-500'>{total}</p>
+                <p className = 'text-lg font-semibold p-2 lg:text-2xl'>{price}</p>
+                <p className = 'text-right font-extralight text-xs text-gray-500'>{total}</p>
               </p>
             </div>
         </div>
