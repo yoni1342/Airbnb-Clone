@@ -26,7 +26,8 @@ function Header() {
   return (
     <header className ='sticky z-10 p-5 shadow-md top-0 grid grid-cols-3 bg-white md:px-10'>
         {/* Left */}
-        <div className = 'relative h-10 flex items-center cursor-pointer' onClick = {()=>Router.push('/')}>
+        <Link href = '/'>
+        <div className = 'relative h-10 flex items-center cursor-pointer'>
             <Image
                 src = 'https://links.papareact.com/qd3'
                 layout = 'fill'
@@ -35,6 +36,7 @@ function Header() {
             />
 
         </div>
+        </Link>
         {/* Middle */}
         <div className = 'py-2 md:shadow-sm md:border-2 sm:border-2 flex items-center rounded-full px-3'>
             <input 
@@ -76,7 +78,9 @@ function Header() {
                     </div>
                     <div className = 'flex  text-sm  font-semibold'>
                         <button onClick  = {resetInput} className = 'flex-grow text-gray-500'>Cancel</button>
+                        <Link href = '/search'>
                         <button className = 'flex-grow text-red-400'>Search</button>
+                        </Link>
                     </div>
                 </div>
             )
