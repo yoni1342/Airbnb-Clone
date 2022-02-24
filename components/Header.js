@@ -4,6 +4,8 @@ import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon, UsersIcon }from '@h
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
+import Router from 'next/router';
+import Link from 'next/link';
 function Header() {
     const [searchInput, setSearchInput] = useState('');
     const [startDate, setStartDate] = useState(new Date())
@@ -24,7 +26,7 @@ function Header() {
   return (
     <header className ='sticky z-10 p-5 shadow-md top-0 grid grid-cols-3 bg-white md:px-10'>
         {/* Left */}
-        <div className = 'relative h-10 flex items-center cursor-pointer'>
+        <div className = 'relative h-10 flex items-center cursor-pointer' onClick = {()=>Router.push('/')}>
             <Image
                 src = 'https://links.papareact.com/qd3'
                 layout = 'fill'
