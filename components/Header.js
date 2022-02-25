@@ -38,7 +38,7 @@ function Header({palce}) {
         </div>
         </Link>
         {/* Middle */}
-        <div className = 'py-2 md:shadow-sm md:border-2 sm:border-2 flex items-center rounded-full px-3'>
+        <div className = 'py-2 md:shadow-sm md:border-2 flex items-center rounded-full px-3'>
             <input 
             value = {searchInput} 
             onChange = {(e)=>setSearchInput(e.target.value)}

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { format } from 'date-fns';
 import InfoCard from '../components/InfoCard';
 import Footer from '../components/Footer';
+import Map from '../components/Map';
 function Search({searchResults}) {
   const router = useRouter();
   const {location, startDate, endDate, numberGust} = router.query
@@ -14,7 +15,7 @@ function Search({searchResults}) {
   return (
     <div>
         <Header palce = {`${location} | ${range} | ${numberGust} guests`}/>
-        <main>
+        <main className ='flex'>
             <section className ='flex-grow py-14 px-6'>
                 <p className = 'text-xs'>300+ Stays - {range} - for {numberGust} number of gusts </p>
                 <h1 className = 'text-3xl font-semibold mt-2 mb-6'>Stayes in {location}</h1>
@@ -39,6 +40,9 @@ function Search({searchResults}) {
                     />
                   ))}
                 </div>
+            </section>
+            <section className = 'hidden xl:inline-flex xl:min-w-[600px]'>
+              <Map searchResults = {searchResults} />
             </section>
         </main>
         <Footer/>
