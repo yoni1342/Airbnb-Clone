@@ -4,7 +4,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import Geolib, { getCenter } from 'geolib'
 function Map({searchResults}) {
   const [selectedLocation, setSelectedLocation] = useState({});
-  console.log(selectedLocation)
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
@@ -43,9 +42,9 @@ function Map({searchResults}) {
             >📌</p>
           </Marker>
           
-          {selectedLocation.long == result.long ? (
+          {selectedLocation.long === result.long ? (
             <Popup 
-            onClose = {()=>setSelectedLocation({})}
+            onClose = {() => setSelectedLocation({})}
             closeOnClick = {true}
             latitude={result.lat}
             longitude = {result.long}

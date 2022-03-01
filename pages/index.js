@@ -11,7 +11,7 @@ export default function Home({ exporeData, cardsData }) {
     <div className="">
       <Head>
         <title>Airbnb 2.0</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       {/* Heder */}
